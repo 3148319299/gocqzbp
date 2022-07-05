@@ -79,7 +79,7 @@ import (
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/image_finder"   // 关键字搜图
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/inject"         // 注入指令
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/jandan"         // 煎蛋网无聊图
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/juejuezi"       // 绝绝子生成器
+	//_ "github.com/FloatTech/ZeroBot-Plugin/plugin/juejuezi"       // 绝绝子生成器
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/lolicon"        // lolicon 随机图片
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/midicreate"     // 简易midi音乐制作
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/moyu"           // 摸鱼
@@ -197,7 +197,7 @@ func init() {
 				CommandPrefix: *prefix,
 				// SuperUsers 某些功能需要主人权限，可通过以下两种方式修改
 				SuperUsers: []string{"3148319299"}, // 通过代码写死的方式添加主人账号
-				SuperUsers: qqs, // 通过命令行参数的方式添加主人账号
+				//SuperUsers: qqs, // 通过命令行参数的方式添加主人账号
 				Driver:     []zero.Driver{f},
 			},
 		)
