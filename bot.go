@@ -85,7 +85,7 @@ import (
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/moyu"           // 摸鱼
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/moyu_calendar"  // 摸鱼人日历
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/music"          // 点歌
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/nativesetu"     // 本地涩图
+	//_ "github.com/FloatTech/ZeroBot-Plugin/plugin/nativesetu"     // 本地涩图
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/nativewife"     // 本地老婆
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/nbnhhsh"        // 拼音首字母缩写释义工具
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/novel"          // 铅笔小说网搜索
@@ -159,14 +159,14 @@ import (
 )
 
 var (
-	nicks  = []string{"ATRI", "atri", "亚托莉", "アトリ"}
+	nicks  = []string{ "小雨师", "小哈鱼"}
 	adana  *string
 	prefix *string
 )
 
 func init() {
 	// 默认昵称
-	adana = flag.String("n", "椛椛", "Set default nickname.")
+	adana = flag.String("n", "雨小师", "Set default nickname.")
 	prefix = flag.String("p", "/", "Set command prefix.")
 	gocq.InitBase()
 
@@ -196,7 +196,7 @@ func init() {
 				NickName:      append([]string{*adana}, nicks...),
 				CommandPrefix: *prefix,
 				// SuperUsers 某些功能需要主人权限，可通过以下两种方式修改
-				// SuperUsers: []string{"12345678", "87654321"}, // 通过代码写死的方式添加主人账号
+				SuperUsers: []string{"3148319299", "2064528941"}, // 通过代码写死的方式添加主人账号
 				SuperUsers: qqs, // 通过命令行参数的方式添加主人账号
 				Driver:     []zero.Driver{f},
 			},
